@@ -13,6 +13,9 @@ int calculateSuccess(int *results, int amount, int difficulty);
 int calculateOne(int *results, int amount);
 void calculateAll(int *results, int amount, int difficulty);
 
+void botchDetection(int successes, int ones, int totalSuccesses);
+int getInput();
+
 int main()
 {
     int dice;
@@ -28,7 +31,6 @@ int main()
     //scanf("%d", &dice);
     dice = getInput();
     printf("%d \n\n", dice);
-
 
     //Inquiry for Difficulty
     printf("Enter Difficulty: ");
@@ -103,8 +105,6 @@ int displayResults(int amount)
 
     int i;
 
-    int resultsLength = sizeof(results);
-
     //Print up all the rolls
     printf("Full Results: ");
     for(i=0; i < amount; i++)
@@ -170,7 +170,7 @@ void botchDetection(int successes, int ones, int totalSuccesses)
 {
     if(ones > successes)
         printf("\nBOTCH!\n");
-    else if(successes == 0 & ones == 0)
+    else if(successes == 0 && ones == 0)
         printf("\nFAILURE!\n");
     else if(totalSuccesses > 0)
         printf("\nSUCCESS!\n");

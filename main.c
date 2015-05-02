@@ -171,7 +171,7 @@ void botchDetection(int successes, int ones, int totalSuccesses)
     if(ones > successes)
         printf("\nBOTCH!\n");
     else if(successes == 0 & ones == 0)
-        printf("\FAILURE!\n");
+        printf("\nFAILURE!\n");
     else if(totalSuccesses > 0)
-        printf("\SUCCESS!\n");
+        printf("\nSUCCESS!\n");
 }

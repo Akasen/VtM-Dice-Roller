@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-#include <ctype.h>
 #include "tinymt32.c"
 #include "tinymt32.h"
 
@@ -41,7 +40,7 @@ int main()
     results = displayResults(dice);
 
     calculateAll(results, dice, difficulty);
-    printf("\n_______________________\n");
+    printf("\n_______________________\n\n");
     }while(1==1);
 
     return 0;
@@ -113,7 +112,7 @@ int displayResults(int amount)
     }
     printf("\n\n");
 
-    return results;
+    return (int )results;
 }
 
 // Checks for successes
